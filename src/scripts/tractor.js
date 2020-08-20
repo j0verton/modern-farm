@@ -1,9 +1,16 @@
-import { createAsparagus } from "./seeds/asparagus"
-import { addPlant, usePlants } from "./field"
+import { createAsparagus } from "./seeds/asparagus.js"
+import { createCorn } from "./seeds/corn.js"
+import { createPotato } from "./seeds/potato.js"
+import { createSoybean } from "./seeds/soybean.js"
+import { createSunflower } from "./seeds/sunflower.js"
+import { createWheat } from "./seeds/wheat.js"
+import { addPlant, usePlants } from "./field.js"
 
-export const plantSeeds = (plan) = {
-    for (const row of rows) {
-        for (const plant of row) {
+
+
+export const plantSeeds = (plan) => {
+    for (let taco of plan) {
+        for (let plant of taco) {
             if (plant === "Asparagus" ){
                 const asparagusSeed = createAsparagus();
                 addPlant(asparagusSeed);
@@ -18,9 +25,9 @@ export const plantSeeds = (plan) = {
                 addPlant(sunflowerSeed);
             } else if(plant === "Wheat" ){
                 const wheatSeed = createWheat();
-                addPlant(wheat);
+                addPlant(wheatSeed);
             } else if(plant === "Corn" ){
-                const cornSeed = createAsparagus();
+                const cornSeed = createCorn();
                 addPlant(cornSeed[0]);
             }
             usePlants();          
