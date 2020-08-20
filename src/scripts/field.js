@@ -1,7 +1,8 @@
 const plants =[];
 
 export const addPlant = (seed) => {
-    if (!Array.isArray) {
+    if (!Array.isArray(seed)) {
+        // console.log(seed)
         plants.push(seed);
     } else {
         plants.push(seed[0]);

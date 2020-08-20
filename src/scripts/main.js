@@ -6,6 +6,7 @@ const yearlyPlan=createPlan();
 
 import { createCorn } from './seeds/corn.js';
 const cornSeed = createCorn();
+console.log(cornSeed)
 
 import { createAsparagus } from "./seeds/asparagus.js";
 import { addPlant } from './field.js';
