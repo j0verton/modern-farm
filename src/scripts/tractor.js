@@ -23,7 +23,6 @@ export const plantSeeds = (plan) => {
                 const potatoSeed = createPotato();
                 addPlant(potatoSeed);
                 // console.log(potatoSeed)
-
             } else if (plant === "Soybean" ){
                 const soybeanSeed = createSoybean();
                 addPlant(soybeanSeed);
@@ -38,11 +37,11 @@ export const plantSeeds = (plan) => {
                 const cornSeed = createCorn();
                 addPlant(cornSeed[0]);
             }
-            const plantedField = usePlants();
             // console.log("log plants in for loop", plants) 
         }
-        const plantedField = usePlants();
+        // usePlants();
+        
     }
-
+    return "field planted"
 
 }
