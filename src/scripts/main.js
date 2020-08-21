@@ -6,22 +6,25 @@ const yearlyPlan=createPlan();
 
 import { createCorn } from './seeds/corn.js';
 const cornSeed = createCorn();
-console.log(cornSeed)
+// console.log(cornSeed)
 
 import { createAsparagus } from "./seeds/asparagus.js";
 import { addPlant } from './field.js';
-import {usePlants} from'./field.js';
+import { usePlants } from'./field.js';
 import { plantSeeds } from './tractor.js';
 
 
-const asparagusSeed = createAsparagus();
-
-addPlant(asparagusSeed);
-addPlant (cornSeed)
-
-const newPlants = usePlants();
-console.log(newPlants);
 
 
-const plantedField = plantSeeds(createPlan());
-console.log(plantedField)
+// const asparagusSeed = createAsparagus();
+
+// addPlant(asparagusSeed);
+// addPlant (cornSeed)
+
+// const newPlants = usePlants();
+// console.log(newPlants);
+
+const plan = createPlan()
+// console.log("log plan", plan)
+const plantedField = plantSeeds(plan);
+console.log("log planted field", plantedField)
