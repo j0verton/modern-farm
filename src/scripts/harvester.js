@@ -1,6 +1,6 @@
 export const harvestPlants = (plantsArray) => {
     const seedArray = [];
-    for (plant of plantsArray) {
+    for (const plant of plantsArray) {
         const plantYield = plant.output;
         if (plant.type !== "Corn") {
             for(let i=0; i<plantYield; i++) {

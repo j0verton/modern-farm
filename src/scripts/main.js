@@ -10,19 +10,9 @@ import { harvestPlants } from './harvester.js';
 
 
 const yearlyPlan=createPlan();
-console.log(yearlyPlan);
 
-// const cornSeed = createCorn();
-// const asparagusSeed = createAsparagus();
-
-// addPlant(asparagusSeed);
-// addPlant (cornSeed)
-// debugger
-console.log("log new plants",newPlants);
-// const plan = createPlan()
-// console.log("log plan", plan)
 const planted = plantSeeds(yearlyPlan);
-console.log(planted);
+
 const plantedField = usePlants();
 
 const harvest = harvestPlants(plantedField);
