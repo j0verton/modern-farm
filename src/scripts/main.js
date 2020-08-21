@@ -6,6 +6,7 @@ import { createAsparagus } from "./seeds/asparagus.js";
 import { addPlant } from './field.js';
 import { usePlants } from'./field.js';
 import { plantSeeds } from './tractor.js';
+import { harvestPlants } from './harvester.js';
 
 
 const yearlyPlan=createPlan();
@@ -18,9 +19,11 @@ console.log(yearlyPlan);
 // addPlant (cornSeed)
 // debugger
 console.log("log new plants",newPlants);
-debugger
 // const plan = createPlan()
 // console.log("log plan", plan)
-const plantedField = plantSeeds(yearlyPlan);
-console.log(plantedField)
-const newPlants = usePlants();
+const planted = plantSeeds(yearlyPlan);
+console.log(planted);
+const plantedField = usePlants();
+
+const harvest = harvestPlants(plantedField);
+console.log(harvest)
