@@ -13,8 +13,10 @@ import { catalog } from './catalog.js';
 const yearlyPlan=createPlan();
 
 const planted = plantSeeds(yearlyPlan);
-
 const plantedField = usePlants();
+
+console.log("log planted seeds", plantedField)
+
 
 const harvest = harvestPlants(plantedField);
 console.log(harvest)

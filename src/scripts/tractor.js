@@ -6,8 +6,6 @@ import { createSunflower } from "./seeds/sunflower.js"
 import { createWheat } from "./seeds/wheat.js"
 import { addPlant, usePlants } from "./field.js"
 
-const plants =[];
-
 export const plantSeeds = (plan) => {
     for (let taco of plan) {
         for (let plant of taco) {
@@ -29,6 +27,7 @@ export const plantSeeds = (plan) => {
             } else if(plant === "Corn" ){
                 const cornSeed = createCorn();
                 addPlant(cornSeed[0]);
+                addPlant(cornSeed[1]);
             };
         };
     };
