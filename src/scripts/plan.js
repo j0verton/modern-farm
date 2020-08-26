@@ -10,7 +10,7 @@ export const createPlan = () => {
         }
         plan.push(row)
     }
-
+    // console.log(plan);
     return plan
 }
 
