@@ -1,27 +1,24 @@
 console.log("Welcome to the main module")
 
-import {createPlan} from './plan.js'
-const yearlyPlan=createPlan();
-// console.log(createPlan);
-
+import { createPlan } from './plan.js'
 import { createCorn } from './seeds/corn.js';
-const cornSeed = createCorn();
-console.log(cornSeed)
-
 import { createAsparagus } from "./seeds/asparagus.js";
 import { addPlant } from './field.js';
-import {usePlants} from'./field.js';
+import { usePlants } from'./field.js';
 import { plantSeeds } from './tractor.js';
+import { harvestPlants } from './harvester.js';
+import { catalog } from './catalog.js';
 
 
-const asparagusSeed = createAsparagus();
+const yearlyPlan=createPlan();
 
-addPlant(asparagusSeed);
-addPlant (cornSeed)
+const planted = plantSeeds(yearlyPlan);
+const plantedField = usePlants();
 
-const newPlants = usePlants();
-console.log(newPlants);
+console.log("log planted seeds", plantedField)
 
 
-const plantedField = plantSeeds(createPlan());
-console.log(plantedField)
+const harvest = harvestPlants(plantedField);
+console.log(harvest)
+
+catalog(harvest);
