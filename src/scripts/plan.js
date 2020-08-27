@@ -3,7 +3,7 @@ const types = ["Soybean", "Corn", "Asparagus", "Wheat", "Potato", "Sunflower"]
 export const createPlan = () => {
     const plan = []
 
-    for (let index = 0; index < 3; index++) {
+    for (let y = 0; y < 3; y++) {
         const row = []
         for (let j = 0; j < 6; j++) {
             row.push(crop.next().value)

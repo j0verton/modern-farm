@@ -98,6 +98,4 @@ export const catalogTable = (harvestArray) => {
         const foodTarget = document.querySelector(".container")
         foodTarget.innerHTML += tableHTML
 
-      console.log(wheatArray);
-
 }
