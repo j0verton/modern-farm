@@ -12,6 +12,6 @@ export const harvestPlants = (plantsArray) => {
 
         }      
     }
-
+    
     return seedArray
 }
