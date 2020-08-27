@@ -19,7 +19,11 @@ console.log("log planted seeds", plantedField)
 
 
 const harvest = harvestPlants(plantedField);
-console.log(harvest)
+console.log("log harvest", harvest)
 
 // catalog(harvest);
 catalogTable(harvest)
+
+//other index number options
+//-new iteration of objects with a basic for loop using i to create the value
+//-
