@@ -6,6 +6,8 @@ export const harvestPlants = (plantsArray) => {
         const plantYield = plant.output;
         if (plant.type !== "Corn") {
             for(let i=0; i<plantYield; i++) { 
+                
+                
                 // debugger;      
                 // let idPlant = { }
                 // idPlant.id = idNum  
@@ -18,7 +20,9 @@ export const harvestPlants = (plantsArray) => {
 
                 // const currentId = 1 +idNum
                 // newPlant.id = currentId
-                //    
+                //
+                
+                
             }
         } else { 
             for(let i=0; i<plantYield/2; i++) {
@@ -38,10 +42,11 @@ export const harvestPlants = (plantsArray) => {
 
         }      
     }
-    // for (let i=0; i<seedArray.length; i++) {
-    //     let plant = seedArray[i];
-    //     plant.id = seedArray[i].indexOf
-    // }
+    for (let i=0; i<seedArray.length; i++) {
+        let plant = seedArray[i];
+        console.log(plant, i)
+        plant.id = i + 1
+    }
     // debugger;
 
     // seedArray.forEach((pla, index) => pla.id = index + 1);
