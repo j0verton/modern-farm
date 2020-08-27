@@ -14,12 +14,11 @@ export const harvestPlants = (plantsArray) => {
                 // console.log("newplant", newPlant)
                 // idNum ++
                 seedArray.push(plant)
-                console.log("seedarray after new plant push", seedArray)
+                // console.log("seedArray after new plant push", seedArray)
 
                 // const currentId = 1 +idNum
                 // newPlant.id = currentId
-                //
-                
+                //    
             }
         } else { 
             for(let i=0; i<plantYield/2; i++) {
@@ -44,7 +43,11 @@ export const harvestPlants = (plantsArray) => {
     //     plant.id = seedArray[i].indexOf
     // }
     // debugger;
-    seedArray.forEach((pla, index) => pla.id = index + 1);
+
+    // seedArray.forEach((pla, index) => pla.id = index + 1);
+    // seedArray.forEach(function(item, index, array) {
+    //     console.log("index test", item, index)
+    // });
 
 
     console.log("check id value", seedArray);
