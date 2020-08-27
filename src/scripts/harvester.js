@@ -1,61 +1,29 @@
 // let idNum = 0
 export const harvestPlants = (plantsArray) => {
     const seedArray = [];
-    // let idNum = 0
+    let idNum = 0
+    let plantYield = 0;
     for (const plant of plantsArray) {
-        const plantYield = plant.output;
+        idNum = idNum + plantYield
         if (plant.type !== "Corn") {
-            for(let i=0; i<plantYield; i++) { 
-                
-                
-                // debugger;      
-                // let idPlant = { }
-                // idPlant.id = idNum  
-                // console.log(idPlant)  
-                // let newPlant = Object.assign(plant, idPlant)
-                // console.log("newplant", newPlant)
-                // idNum ++
-                seedArray.push(plant)
-                // console.log("seedArray after new plant push", seedArray)
-
-                // const currentId = 1 +idNum
-                // newPlant.id = currentId
-                //
-                
-                
+            const plantYield = plant.output;
+            for(let i=1; i<=plantYield; i++) { 
+                const newPlant = plant;
+                newPlant.id = idNum + i;
+                seedArray.push(newPlant);                    
             }
+            idNum = idNum+plantYield
         } else { 
-            for(let i=0; i<plantYield/2; i++) {
-                // let idPlant = { }
-                // idPlant.id = idNum  
-                // console.log(idPlant)  
-                // let newPlant = Object.assign(plant, idPlant)
-                // console.log("newplant", newPlant)
-                // idNum ++
-                seedArray.push(plant)
-
-                // const currentId = 1 + idNum
-                // newPlant.id = currentId
-                // idNum ++
-                
+            const plantYield = plant.output/2;
+            for(let i=1; i<=plantYield; i++) {
+                const newPlant = plant;
+                newPlant.id = idNum + i;
+                seedArray.push(newPlant);        
             }
+            idNum = idNum+plantYield
 
         }      
     }
-    for (let i=0; i<seedArray.length; i++) {
-        let plant = seedArray[i];
-        console.log(plant, i)
-        plant.id = i + 1
-    }
-    // debugger;
-
-    // seedArray.forEach((pla, index) => pla.id = index + 1);
-    // seedArray.forEach(function(item, index, array) {
-    //     console.log("index test", item, index)
-    // });
-
-
-    console.log("check id value", seedArray);
     return seedArray;
 }
 
@@ -64,3 +32,5 @@ export const harvestPlants = (plantsArray) => {
 //other index number options
 //-new iteration of objects with a basic for loop using i to create the value
 //-
+
+//-via mori, build an additional for loop inside the others to itterate each type of plant and add(something like)  the yield to the counter

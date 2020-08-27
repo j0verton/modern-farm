@@ -15,15 +15,17 @@ const yearlyPlan=createPlan();
 const planted = plantSeeds(yearlyPlan);
 const plantedField = usePlants();
 
-console.log("log planted seeds", plantedField)
+// console.log("log planted seeds", plantedField)
 
 
 const harvest = harvestPlants(plantedField);
 console.log("log harvest", harvest)
+// harvest.forEach((pla, index) => pla.id = index + 1);
+// console.log("with ids?", harvest)
+    // seedArray.forEach(function(item, index, array) {
+    //     console.log("index test", item, index)
+    // });
 
 // catalog(harvest);
 catalogTable(harvest)
 
-//other index number options
-//-new iteration of objects with a basic for loop using i to create the value
-//-
