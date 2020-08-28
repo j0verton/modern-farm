@@ -15,7 +15,7 @@ const yearlyPlan=createPlan();
 const planted = plantSeeds(yearlyPlan);
 const plantedField = usePlants();
 
-// console.log("log planted seeds", plantedField)
+console.log("log planted seeds", plantedField)
 
 
 const harvest = harvestPlants(plantedField);
