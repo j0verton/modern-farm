@@ -14,29 +14,7 @@ export const harvestPlants = (plantsArray) => {
                 newPlant.output = plant.output;
                 newPlant.icon = plant.icon;
                 newPlant.id = idNum + i;
-                seedArray.push(newPlant);
-                
-                
-                // const newPlant = plant;
-                // newPlant.id= idNum + i + 1;
-                // seedArray.push(newPlant);
-
-
-                // let idPlant = {}
-                // idPlant.id = idNum  
-                // console.log(idPlant)  
-                // idNum ++
-
-                // const newPlant = Object.assign(plant, idPlant)
-                // console.log("newplant", newPlant)
-                // idNum ++
-                 // debugger;
-                // const currentId = 1 + idNum
-                // idNum ++
-                // newPlant.id = currentId
-                //
-               
-                // console.log("seedArray after new plant push", seedArray)              
+                seedArray.push(newPlant);   
             }
             idNum = idNum+plantYield
         } else { 
@@ -49,43 +27,12 @@ export const harvestPlants = (plantsArray) => {
                 newPlant.output = plant.output;
                 newPlant.icon = plant.icon;
                 newPlant.id = idNum + i;
-                seedArray.push(newPlant);
-               
-                // const newPlant = plant;
-                // newPlant.id= idNum + i + 1;
-                // seedArray.push(newPlant);
-                
-                // let idPlant = { }
-                // idPlant.id = idNum  
-                // console.log(idPlant)  
-                // idNum ++
-                // let newPlant = Object.assign(plant, idPlant)
-                // console.log("newplant", newPlant)
-                // idNum ++
-                // const currentId = 1 + idNum
-                // newPlant.id = currentId
-                // idNum ++
-                
+                seedArray.push(newPlant);  
             }
             idNum = idNum+plantYield
 
-        }      
+        }
     }
-    // for (let i=0; i<seedArray.length; i++) {
-    //     let plant = seedArray[i];
-    //     console.log(plant, i)
-    //     plant.id = i + 1
-    // }
-    // debugger;
-
-    // seedArray.forEach((taco, index) => taco.id = index+1);
-
-    // seedArray.forEach(function(item, index) {
-    //     console.log("index test", item, index)
-    // });
-
-
-    // console.log("check id value", seedArray);
     return seedArray;
 }
 
