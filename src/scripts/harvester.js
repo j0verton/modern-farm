@@ -8,21 +8,30 @@ export const harvestPlants = (plantsArray) => {
         if (plant.type !== "Corn") {
             const plantYield = plant.output;
             for(let i=1; i<=plantYield; i++) { 
-                const newPlant = plant;
+                const newPlant = {};
+                newPlant.type = plant.type;
+                newPlant.height = plant.height;
+                newPlant.output = plant.output;
+                newPlant.icon = plant.icon;
                 newPlant.id = idNum + i;
-                seedArray.push(newPlant);                    
+                seedArray.push(newPlant);   
             }
             idNum = idNum+plantYield
         } else { 
             const plantYield = plant.output/2;
             for(let i=1; i<=plantYield; i++) {
-                const newPlant = plant;
+               
+                const newPlant = {};
+                newPlant.type = plant.type;
+                newPlant.height = plant.height;
+                newPlant.output = plant.output;
+                newPlant.icon = plant.icon;
                 newPlant.id = idNum + i;
-                seedArray.push(newPlant);        
+                seedArray.push(newPlant);  
             }
             idNum = idNum+plantYield
 
-        }      
+        }
     }
     return seedArray;
 }

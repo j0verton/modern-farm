@@ -13,11 +13,8 @@ export const catalog = (harvestArray) => {
         }
         return 0;
       });
-    console.log("sorted?",harvestArray)
-    for (const food of harvestArray) {
-        foodTarget.innerHTML += `<section class="plant">${food.type}</section>`
+    foodTarget.innerHTML += harvestArray.map(food => `<section class="plant">${food.type}</section>`).join('')
 
-    }
 
 }
 

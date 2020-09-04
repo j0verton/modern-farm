@@ -12,5 +12,3 @@ export const addPlant = (seed) => {
 export const usePlants = () => {
     return plants
 }
-
-// use Array.isArray to check if corn got passed in
